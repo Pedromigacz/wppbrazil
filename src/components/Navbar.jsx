@@ -12,17 +12,17 @@ import CloseIcon from "@mui/icons-material/Close"
 const DesktopNavbar = () => (
   <nav className={styles.nav}>
     <div className={styles.logo}>WPP Placeholder</div>
-    <Link to="#" className={styles.link}>
+    <Link to="/" className={styles.link}>
       Home
     </Link>
-    <Link to="#" className={styles.link}>
+    <Link to="/produtos" className={styles.link}>
       Produtos
     </Link>
-    <Link to="#" className={styles.link}>
+    <Link to="/contato" className={styles.link}>
       Contato
     </Link>
     <Link to="#" className={styles.link}>
-      Endereços
+      Endereço
     </Link>
     <div className={styles.languageSelector}>
       <span>Idioma:&nbsp;</span>
@@ -50,10 +50,18 @@ const MobileNavbar = () => {
         <CloseIcon />
       </button>
       <h1>Menu:</h1>
-      <Link className={styles.mobileItem}>Home</Link>
-      <Link className={styles.mobileItem}>Produtos</Link>
-      <Link className={styles.mobileItem}>Contato</Link>
-      <Link className={styles.mobileItem}>Endereços</Link>
+      <Link className={styles.mobileItem} to="/">
+        Home
+      </Link>
+      <Link className={styles.mobileItem} to="/produtos">
+        Produtos
+      </Link>
+      <Link className={styles.mobileItem} to="contato">
+        Contato
+      </Link>
+      <Link className={styles.mobileItem} to="#">
+        Endereço
+      </Link>
       <div className={styles.mobileLanguageSelector}>
         <h2>IDIOMA:</h2>
         <Link to="#" className={styles.mobileLink}>
