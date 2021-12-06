@@ -13,6 +13,8 @@
 
 body {
   margin: 0;
+  background: linear-gradient(138.57deg, #001122 0%, #000a14 62.44%) no-repeat;
+  min-height: 100vh;
 }
 
 a {
