@@ -1,9 +1,11 @@
 import React from "react"
+import { Navbar } from "../components/"
+import "../styles/reset.css"
 
 const DefaultLayout = ({ children }) => {
   return (
     <div>
-      <h1>Layout title</h1>
+      <Navbar />
       {children}
     </div>
   )
