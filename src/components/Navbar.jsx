@@ -80,8 +80,10 @@ const MobileNavbar = () => {
   )
 }
 
-const Navbar = () => {
-  return <MobileNavbar />
-}
+const Navbar = () => (
+  <>
+    <MobileNavbar /> <DesktopNavbar />
+  </>
+)
 
 export default Navbar
