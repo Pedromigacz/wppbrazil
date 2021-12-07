@@ -1,0 +1,38 @@
+.firstSection {
+  height: calc(100vh - 170px);
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: row;
+}
+
+.main {
+  min-width: 60%;
+  display: grid;
+  place-items: center;
+}
+
+.main h1 {
+  font-size: 42px;
+  font-weight: 900;
+}
+
+.main h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.main h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.aside {
+  flex-grow: 1;
+  display: grid;
+  place-items: center;
+}
+
+.image {
+  width: 50%;
+  box-shadow: 17px 17px 0px #81b017;
+}
