@@ -96,3 +96,29 @@
     width: 80% !important;
   }
 }
+
+/* Vanity */
+
+.lineOne {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #002776;
+  width: 80%;
+  margin: 1rem 0;
+}
+
+.lineTwo {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #e9d400;
+  width: 90%;
+  margin: 0;
+}
+
+.lineThree {
+  display: block;
+  border: none;
+  border-bottom: 1px solid #009c3b;
+  margin-bottom: 4rem;
+  margin: 1rem 0 6rem 0;
+}
