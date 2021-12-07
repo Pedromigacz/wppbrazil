@@ -7,6 +7,19 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import Seo from "../components/seo"
 
+// Swiper imports
+import { Swiper, SwiperSlide } from "swiper/react"
+
+// Import Swiper styles
+import "swiper/css/bundle"
+import "swiper/css"
+
+// import Swiper core and required modules
+import SwiperCore, { Autoplay } from "swiper"
+
+// install Swiper modules
+SwiperCore.use([Autoplay])
+
 const IndexPage = () => {
   const {
     data: { nodes },
@@ -35,13 +48,21 @@ const IndexPage = () => {
           <h3>COMPENSADOS - OSB - Chapas - Peças Usinadas e Recortadas</h3>
         </div>
       </main>
-      <aside className={styles.aside}>
+      <Swiper
+        className={styles.slider}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+      >
         {nodes.map((img, key) => (
-          <div className={styles.image}>
-            <GatsbyImage image={getImage(img.imagem)} alt={"slide"} />
-          </div>
+          <SwiperSlide key={key} className={styles.slide}>
+            <div className={styles.image}>
+              <GatsbyImage image={getImage(img.imagem)} alt={"slide"} />
+            </div>
+          </SwiperSlide>
         ))}
-      </aside>
+      </Swiper>
     </section>
   )
 }
