@@ -2,6 +2,7 @@ import * as React from "react"
 import { Link } from "gatsby"
 import * as styles from "../styles/index.module.css"
 import { motion } from "framer-motion"
+import { SecondSection } from "../components"
 
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
@@ -97,6 +98,7 @@ const IndexPage = () => {
         whileInView="visible"
         viewport={{ once: true }}
       />
+      <SecondSection />
     </>
   )
 }
