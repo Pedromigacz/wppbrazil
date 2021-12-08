@@ -4,6 +4,7 @@ import { Link } from "gatsby"
 import { motion, AnimatePresence } from "framer-motion"
 
 // Icons
+import MainLogo from "../vectors/MainLogo.jsx"
 import PTFlag from "../vectors/PTFlag.jsx"
 import USFlag from "../vectors/USFlag.jsx"
 import SPFlag from "../vectors/SPFlag.jsx"
@@ -12,7 +13,9 @@ import CloseIcon from "@mui/icons-material/Close"
 
 const DesktopNavbar = () => (
   <nav className={styles.nav}>
-    <div className={styles.logo}>WPP Placeholder</div>
+    <div className={styles.logo}>
+      <MainLogo />
+    </div>
     <Link to="/" className={styles.link}>
       Home
     </Link>
