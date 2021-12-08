@@ -1,5 +1,5 @@
 import React from "react"
-import { Navbar } from "../components/"
+import { Navbar, Footer } from "../components/"
 import "../styles/reset.css"
 import { SnackbarProvider } from "notistack"
 
@@ -8,6 +8,7 @@ const DefaultLayout = ({ children }) => {
     <SnackbarProvider maxSnack={3}>
       <Navbar />
       {children}
+      <Footer />
     </SnackbarProvider>
   )
 }

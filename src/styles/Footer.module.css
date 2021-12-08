@@ -1,0 +1,36 @@
+.mainFooter {
+  color: #f4f4f4;
+  background-color: #222222;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.phone {
+  font-size: 20px;
+  margin-left: 1rem;
+}
+
+.instagram {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.instagram svg {
+  margin-right: 8px;
+}
+
+.info {
+  display: block;
+  font-size: 1rem;
+  margin: 4px 0;
+  margin-left: 1rem;
+}
