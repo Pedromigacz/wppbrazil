@@ -56,13 +56,13 @@ const Contact = () => {
         method: "POST",
         url: "/",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        data: {
+        data: new URLSearchParams({
           "form-name": "contato",
           Nome: form.name,
           Email: form.email,
           Número: form.phone,
           Mensagem: form.message,
-        },
+        }),
       })
       .then(e => {
         setForm({
@@ -81,6 +81,7 @@ const Contact = () => {
           variant: "error",
         })
         console.log(err)
+        setLoading(false)
       })
   }
 
