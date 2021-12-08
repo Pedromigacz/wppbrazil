@@ -42,7 +42,7 @@ const Contact = () => {
     phone: "",
     message: "",
   })
-  const [message, setMessage] = useState("Menságem enviada com sucesso!")
+  const [message, setMessage] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -72,7 +72,7 @@ const Contact = () => {
           phone: "",
           message: "",
         })
-        setMessage("Menságem enviada com sucesso!")
+        setMessage("Mensagem enviada com sucesso!")
         setLoading(false)
       })
       .catch(err => {
