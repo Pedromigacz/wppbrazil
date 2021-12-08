@@ -103,6 +103,7 @@ const Contact = () => {
         <h1>Formulário de contato</h1>
         <CssTextField
           label="Nome"
+          name="Nome"
           fullWidth
           className={styles.input}
           required
@@ -113,6 +114,7 @@ const Contact = () => {
         />
         <CssTextField
           label="E-mail"
+          name="Email"
           fullWidth
           className={styles.input}
           required
@@ -123,6 +125,7 @@ const Contact = () => {
         />
         <CssTextField
           label="Telefone"
+          name="Número"
           fullWidth
           className={styles.input}
           required
@@ -133,6 +136,7 @@ const Contact = () => {
         />
         <CssTextField
           label="Mensagem"
+          name="Mensagem"
           fullWidth
           className={styles.input}
           required
