@@ -60,7 +60,10 @@ const Contact = () => {
     axios({
       method: "post",
       url: "/",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        ...formData.getHeaders(),
+      },
       body: new URLSearchParams(formData).toString(),
     })
       .then(e => {
