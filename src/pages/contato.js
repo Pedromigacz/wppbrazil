@@ -64,7 +64,7 @@ const Contact = () => {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: new URLSearchParams(formData).toString(),
+      body: formData,
     })
       .then(e => {
         setForm({
