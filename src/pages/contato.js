@@ -86,8 +86,14 @@ const Contact = () => {
           {message} <CloseIcon />
         </span>
       )}
-      <form className={styles.form} onSubmit={handleSubmit}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit}
+        name="Contato"
+        data-netlify="true"
+      >
         <h1>Formulário de contato</h1>
+        <input type="hidden" name="form-name" value="contact" />
         <CssTextField
           label="Nome"
           fullWidth
