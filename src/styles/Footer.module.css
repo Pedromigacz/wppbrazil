@@ -34,3 +34,10 @@
   margin: 4px 0;
   margin-left: 1rem;
 }
+
+@media (max-width: 1040px) {
+  .mainFooter {
+    flex-direction: column;
+    gap: 3rem;
+  }
+}

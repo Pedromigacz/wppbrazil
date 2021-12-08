@@ -1,6 +1,7 @@
 import React from "react"
 import MainLogo from "../vectors/MainLogo.jsx"
 import * as styles from "../styles/Footer.module.css"
+import { graphql, useStaticQuery } from "gatsby"
 
 // mui icons
 import InstagramIcon from "@mui/icons-material/Instagram"
