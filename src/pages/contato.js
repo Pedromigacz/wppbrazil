@@ -7,6 +7,7 @@ import TextField from "@mui/material/TextField"
 import { styled } from "@mui/material/styles"
 import LoadingButton from "@mui/lab/LoadingButton"
 import SendIcon from "@mui/icons-material/Send"
+import CloseIcon from "@mui/icons-material/Close"
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -41,6 +42,7 @@ const Contact = () => {
     phone: "",
     message: "",
   })
+  const [message, setMessage] = useState("Menságem enviada com sucesso!")
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -60,13 +62,30 @@ const Contact = () => {
       url: "/",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams(formData).toString(),
-    }).then(e => {
-      setLoading(false)
     })
+      .then(e => {
+        setForm({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+        })
+        setMessage("Menságem enviada com sucesso!")
+        setLoading(false)
+      })
+      .catch(err => {
+        console.log(err)
+        setLoading(false)
+      })
   }
 
   return (
     <section className={styles.formContainer}>
+      {message && (
+        <span className={styles.notification} onClick={e => setMessage("")}>
+          {message} <CloseIcon />
+        </span>
+      )}
       <form className={styles.form} onSubmit={handleSubmit}>
         <h1>Formulário de contato</h1>
         <CssTextField
@@ -118,6 +137,7 @@ const Contact = () => {
           variant="contained"
           endIcon={<SendIcon />}
           sx={{ p: 2, fs: 2 }}
+          type="submit"
         >
           Enviar
         </LoadingButton>

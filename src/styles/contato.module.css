@@ -24,6 +24,20 @@
   margin: 0.5rem 0 !important;
 }
 
+.notification {
+  background-color: #81b017;
+  border-radius: 2px;
+  padding: 8px 12px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  position: fixed;
+  top: 1rem;
+  z-index: 500;
+  cursor: pointer;
+}
+
 :global(.MuiLoadingButton-root) {
   margin-top: 0.5rem !important;
   background-color: #81b017 !important;
@@ -36,5 +50,26 @@
 @media (min-width: 1040px) {
   .formContainer {
     min-height: calc(100vh - 170px);
+  }
+}
+
+@media (max-width: 1530px) {
+  .form {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 1040px) {
+  .form {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 800px) {
+  .form {
+    padding: 2rem;
+  }
+  .form h1 {
+    font-size: 2rem;
   }
 }
