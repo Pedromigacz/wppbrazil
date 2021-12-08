@@ -7,7 +7,7 @@ import TextField from "@mui/material/TextField"
 import { styled } from "@mui/material/styles"
 import LoadingButton from "@mui/lab/LoadingButton"
 import SendIcon from "@mui/icons-material/Send"
-import CloseIcon from "@mui/icons-material/Close"
+import { useSnackbar } from "notistack"
 
 const CssTextField = styled(TextField)({
   "& label.Mui-focused": {
@@ -35,6 +35,7 @@ const CssTextField = styled(TextField)({
 })
 
 const Contact = () => {
+  const { enqueueSnackbar } = useSnackbar()
   const [loading, setLoading] = useState(false)
   const [form, setForm] = useState({
     name: "",
@@ -70,12 +71,16 @@ const Contact = () => {
           phone: "",
           message: "",
         })
-        setMessage("Mensagem enviada com sucesso!")
+        enqueueSnackbar("Mensagem enviada com sucesso!", {
+          variant: "success",
+        })
         setLoading(false)
       })
       .catch(err => {
+        enqueueSnackbar("Algo de errado ocorreu!", {
+          variant: "error",
+        })
         console.log(err)
-        setMessage("Algo de errado ocorreu")
       })
   }
 

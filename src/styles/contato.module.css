@@ -24,20 +24,6 @@
   margin: 0.5rem 0 !important;
 }
 
-.notification {
-  background-color: #81b017;
-  border-radius: 2px;
-  padding: 8px 12px;
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  color: #fff;
-  position: fixed;
-  top: 1rem;
-  z-index: 500;
-  cursor: pointer;
-}
-
 :global(.MuiLoadingButton-root) {
   margin-top: 0.5rem !important;
   background-color: #81b017 !important;
