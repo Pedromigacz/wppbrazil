@@ -62,7 +62,6 @@ const Contact = () => {
       url: "/",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        ...formData.getHeaders(),
       },
       body: new URLSearchParams(formData).toString(),
     })
@@ -93,10 +92,12 @@ const Contact = () => {
         className={styles.form}
         onSubmit={handleSubmit}
         name="Contato"
+        method="post"
         data-netlify="true"
+        data-netlify-honeypot="bot-field"
       >
         <h1>Formulário de contato</h1>
-        <input type="hidden" name="form-name" value="contact" />
+        <input type="hidden" name="form-name" value="Contato" />
         <CssTextField
           label="Nome"
           fullWidth
