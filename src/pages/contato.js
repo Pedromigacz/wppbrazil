@@ -1,7 +1,129 @@
-import React from "react"
+import React, { useState } from "react"
+import * as styles from "../styles/contato.module.css"
+import axios from "axios"
+
+//material ui
+import TextField from "@mui/material/TextField"
+import { styled } from "@mui/material/styles"
+import LoadingButton from "@mui/lab/LoadingButton"
+import SendIcon from "@mui/icons-material/Send"
+
+const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "#222",
+    borderWidth: 2,
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "#222",
+    borderWidth: 2,
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "#222",
+      borderWidth: 2,
+    },
+    "&:hover fieldset": {
+      borderColor: "#222",
+      borderWidth: 2,
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "#222",
+      borderWidth: 2,
+    },
+  },
+})
 
 const Contact = () => {
-  return <h1>Contato</h1>
+  const [loading, setLoading] = useState(false)
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  })
+
+  const handleSubmit = e => {
+    e.preventDefault()
+    if (loading) {
+      return
+    }
+    setLoading(true)
+
+    const formData = new FormData()
+    formData.append("Nome", form.name)
+    formData.append("Email", form.email)
+    formData.append("Número", form.phone)
+    formData.append("Mensagem", form.message)
+
+    axios({
+      method: "post",
+      url: "/",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    }).then(e => {
+      setLoading(false)
+    })
+  }
+
+  return (
+    <section className={styles.formContainer}>
+      <form className={styles.form} onSubmit={handleSubmit}>
+        <h1>Formulário de contato</h1>
+        <CssTextField
+          label="Nome"
+          fullWidth
+          className={styles.input}
+          required
+          value={form.name}
+          onChange={e => {
+            setForm(prev => ({ ...prev, name: e.target.value }))
+          }}
+        />
+        <CssTextField
+          label="E-mail"
+          fullWidth
+          className={styles.input}
+          required
+          value={form.email}
+          onChange={e => {
+            setForm(prev => ({ ...prev, email: e.target.value }))
+          }}
+        />
+        <CssTextField
+          label="Telefone"
+          fullWidth
+          className={styles.input}
+          required
+          value={form.phone}
+          onChange={e => {
+            setForm(prev => ({ ...prev, phone: e.target.value }))
+          }}
+        />
+        <CssTextField
+          label="Mensagem"
+          fullWidth
+          className={styles.input}
+          required
+          multiline
+          minRows={5}
+          maxRows={20}
+          value={form.message}
+          onChange={e => {
+            setForm(prev => ({ ...prev, message: e.target.value }))
+          }}
+        />
+        <LoadingButton
+          loading={loading}
+          loadingPosition="end"
+          variant="contained"
+          endIcon={<SendIcon />}
+          sx={{ p: 2, fs: 2 }}
+        >
+          Enviar
+        </LoadingButton>
+      </form>
+    </section>
+  )
 }
 
 export default Contact

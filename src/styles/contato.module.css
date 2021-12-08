@@ -1,0 +1,38 @@
+.formContainer {
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+.form {
+  display: inline-block;
+  background-color: #efefef;
+  box-shadow: 17px 17px 0px #81b017;
+  padding: 0 200px 100px 200px;
+  font-size: 34px;
+  font-weight: 800;
+  max-width: 50%;
+}
+
+.form h1 {
+  text-align: center;
+}
+
+.input {
+  margin: 0.5rem 0;
+}
+
+:global(.MuiLoadingButton-root) {
+  background-color: #81b017 !important;
+  font-size: 18px;
+}
+:global(.MuiLoadingButton-root:hover) {
+  background-color: #749e15 !important;
+}
+
+@media (min-width: 1040px) {
+  .formContainer {
+    min-height: calc(100vh - 170px);
+  }
+}
