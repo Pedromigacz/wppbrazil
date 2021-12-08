@@ -56,7 +56,7 @@ const Contact = () => {
     formData.append("Email", form.email)
     formData.append("Número", form.phone)
     formData.append("Mensagem", form.message)
-    formData.append("form-name", "Contato")
+    formData.append("form-name", "contato")
 
     axios({
       method: "post",
