@@ -42,7 +42,6 @@ const Contact = () => {
     phone: "",
     message: "",
   })
-  const [message, setMessage] = useState("")
 
   const handleSubmit = e => {
     e.preventDefault()
@@ -51,21 +50,19 @@ const Contact = () => {
     }
     setLoading(true)
 
-    const formData = new FormData()
-    formData.append("Nome", form.name)
-    formData.append("Email", form.email)
-    formData.append("Número", form.phone)
-    formData.append("Mensagem", form.message)
-    formData.append("form-name", "contato")
-
-    axios({
-      method: "post",
-      url: "/contato",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: formData,
-    })
+    axios
+      .request({
+        method: "POST",
+        url: "/",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        data: {
+          "form-name": "contato",
+          Nome: form.name,
+          Email: form.email,
+          Número: form.phone,
+          Mensagem: form.message,
+        },
+      })
       .then(e => {
         setForm({
           name: "",
@@ -78,17 +75,12 @@ const Contact = () => {
       })
       .catch(err => {
         console.log(err)
-        setLoading(false)
+        setMessage("Algo de errado ocorreu")
       })
   }
 
   return (
     <section className={styles.formContainer}>
-      {message && (
-        <span className={styles.notification} onClick={e => setMessage("")}>
-          {message} <CloseIcon />
-        </span>
-      )}
       <form
         className={styles.form}
         onSubmit={handleSubmit}
