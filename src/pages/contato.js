@@ -60,7 +60,7 @@ const Contact = () => {
 
     axios({
       method: "post",
-      url: "/",
+      url: "/contato",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
@@ -92,13 +92,15 @@ const Contact = () => {
       <form
         className={styles.form}
         onSubmit={handleSubmit}
-        name="Contato"
+        name="contato"
+        action="/contato"
         method="post"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
+        netlify
       >
+        <input type="hidden" name="form-name" value="contato" />
         <h1>Formulário de contato</h1>
-        <input type="hidden" name="form-name" value="Contato" />
         <CssTextField
           label="Nome"
           fullWidth
