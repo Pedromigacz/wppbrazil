@@ -13,6 +13,7 @@
   font-size: 34px;
   font-weight: 800;
   max-width: 50%;
+  margin-top: 3rem;
 }
 
 .form h1 {
@@ -20,10 +21,11 @@
 }
 
 .input {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 !important;
 }
 
 :global(.MuiLoadingButton-root) {
+  margin-top: 0.5rem !important;
   background-color: #81b017 !important;
   font-size: 18px;
 }
