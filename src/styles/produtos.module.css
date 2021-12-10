@@ -1,0 +1,43 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  width: 80%;
+  background-color: #efefef;
+  box-shadow: 17px 17px 0px #81b017;
+  padding: 1rem 1rem 1rem 3rem;
+  margin: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  color: #222222;
+  font-size: 36px;
+}
+
+.description {
+  white-space: pre-wrap;
+  font-size: 18px;
+  margin-left: 1rem;
+}
+
+.carousel {
+  width: 500px !important;
+}
+
+.imageContainer {
+  width: 500px;
+  height: 290px;
+  overflow: hidden;
+}
+
+.copyLinkIcon {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}

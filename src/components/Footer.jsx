@@ -61,13 +61,10 @@ const Footer = () => {
         <div>
           <MainLogo />
         </div>
-        <div
-          className={styles.sectionThree}
-          dangerouslySetInnerHTML={{ __html: mapElement }}
-        ></div>
+        <div dangerouslySetInnerHTML={{ __html: mapElement }}></div>
       </div>
       <div className={styles.copyright}>
-        {"Copyright ©"} <a href="#">WPP Brazil</a> 2021.
+        {"Copyright ©"} <a href="/">WPP Brazil</a> 2021.
       </div>
     </footer>
   )
