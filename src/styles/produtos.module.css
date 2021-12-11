@@ -54,7 +54,7 @@
 
 @media (max-width: 1420px) {
   .card {
-    flex-direction: column-reverse;
-    align-items: center;
+    flex-direction: column-reverse !important;
+    align-items: center !important;
   }
 }
