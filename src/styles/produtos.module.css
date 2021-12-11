@@ -15,6 +15,16 @@
   justify-content: space-between;
 }
 
+.card:nth-child(even) {
+  flex-direction: row-reverse;
+  padding: 1rem 3rem 1rem 1rem;
+}
+
+.card:nth-child(even) .textContainer {
+  margin-right: auto;
+  margin-left: 3rem;
+}
+
 .title {
   color: #222222;
   font-size: 36px;
@@ -40,4 +50,11 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+}
+
+@media (max-width: 1420px) {
+  .card {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }

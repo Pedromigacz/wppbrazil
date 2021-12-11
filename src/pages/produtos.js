@@ -64,7 +64,7 @@ const Products = () => {
       {nodes &&
         nodes.map((product, key) => (
           <div className={styles.card} key={key} id={key}>
-            <div>
+            <div className={styles.textContainer}>
               <h2 className={styles.title}>
                 {product.name}{" "}
                 <button
