@@ -33,11 +33,9 @@ const DesktopNavbar = () => (
       <Link to="#">
         <PTFlag className={styles.icons} />
       </Link>
-      /
       <Link to="#">
         <USFlag className={styles.icons} />
       </Link>
-      /
       <Link to="#">
         <SPFlag className={styles.icons} />
       </Link>
