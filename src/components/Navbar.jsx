@@ -25,8 +25,8 @@ const DesktopNavbar = () => (
     <Link to="/contato" className={styles.link}>
       Contato
     </Link>
-    <Link to="#" className={styles.link}>
-      Endereço
+    <Link to="/servicos" className={styles.link}>
+      Serviços
     </Link>
     <div className={styles.languageSelector}>
       <span>Idioma:&nbsp;</span>

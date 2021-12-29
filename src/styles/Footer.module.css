@@ -1,6 +1,6 @@
 .mainFooter {
-  color: #f4f4f4;
-  background-color: #222222;
+  color: #111;
+  background-color: #efefef;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -35,6 +35,31 @@
   font-size: 1rem;
   margin: 4px 0;
   margin-left: 1rem;
+}
+
+@media (min-width: 1040px) {
+  .siteMap {
+    align-self: flex-start;
+  }
+}
+
+.siteMap h4 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.middleLogo {
+  max-width: 250px;
+}
+
+.column {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.mapLink {
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 
 @media (max-width: 1040px) {
