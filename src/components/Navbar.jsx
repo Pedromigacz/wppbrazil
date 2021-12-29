@@ -22,11 +22,11 @@ const DesktopNavbar = () => (
     <Link to="/produtos" className={styles.link}>
       Produtos
     </Link>
-    <Link to="/contato" className={styles.link}>
-      Contato
-    </Link>
     <Link to="/servicos" className={styles.link}>
       Serviços
+    </Link>
+    <Link to="/contato" className={styles.link}>
+      Contato
     </Link>
     <div className={styles.languageSelector}>
       <span>Idioma:&nbsp;</span>

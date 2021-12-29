@@ -71,10 +71,10 @@ const Footer = () => {
           </div>
           <div className={styles.column}>
             <div className={styles.mapLink}>
-              <Link to="/contatos">- Contato</Link>
+              <Link to="/servicos">- Serviços</Link>
             </div>
             <div className={styles.mapLink}>
-              <Link to="/servicos">- Serviços</Link>
+              <Link to="/contatos">- Contato</Link>
             </div>
           </div>
         </div>
